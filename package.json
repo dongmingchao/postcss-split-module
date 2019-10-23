@@ -1,0 +1,38 @@
+{
+  "name": "postcss-split-module",
+  "version": "0.0.1",
+  "description": "PostCSS plugin used for css module split into sep dir, and generate json or d.ts",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "modules",
+    "css modules",
+    "components",
+    "typescript"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "transpile": "babel src -d build",
+    "prepublish": "npm run transpile"
+  },
+  "author": "dongmingchao <1657883517@qq.com>",
+  "license": "MIT",
+  "repository": "dongmingchao/postcss-split-module",
+  "dependencies": {
+    "postcss": "^7.0.18"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "jest": "^24.9.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
