@@ -4,18 +4,6 @@
 
 [PostCSS]: https://github.com/postcss/postcss
 
-```css
-.foo {
-    /* Input example */
-}
-```
-
-```css
-.foo {
-  /* Output example */
-}
-```
-
 ## Usage
 
 Check you project for existed PostCSS config: `postcss.config.js`
@@ -32,6 +20,30 @@ module.exports = {
   ]
 }
 ```
+
+Usually work with rollup-plugin-postcss
+```js
+rollup_postcss({
+  plugins: [
+    postcssSplit(),
+  ],
+  modules: true,
+}),
+```
+Assume you have src/Task/Task.css
+This will generate .css.d.ts to build/components/Task/Task.css and build/components/Task/Task.css.d.ts
+
+## Options
+
+### outputType
+
+export file type, `ts` or `json`, default is `ts`
+`ts` will generate .d.ts
+
+### outputDir
+
+export path, default is `./build/components/`
+`Task/Task.styl` -> `./build/components/Task/Task.css.d.ts`
 
 If you do not use PostCSS, add it according to [official docs]
 and set this plugin in settings.

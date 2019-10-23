@@ -4,13 +4,9 @@ const fs = require('fs');
 const plugin = require('../build');
 
 async function run (input, output, opts) {
-  let result = await postcss({
-    plugins: [
-      plugin(opts),
-    ],
-    modules: true,
-    extract: 'test/style.css',
-  }).process(input, { from: undefined })
+  let result = await postcss([
+    plugin(opts),
+  ]).process(input, { from: undefined })
   expect(result.css).toEqual(output)
   expect(result.warnings()).toHaveLength(0)
 }
