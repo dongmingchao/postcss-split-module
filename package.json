@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest",
     "transpile": "babel src -d build",
-    "prepublish": "npm run transpile"
+    "prepublish": "npm run transpile && cp package.json build/"
   },
   "author": "dongmingchao <1657883517@qq.com>",
   "license": "MIT",
