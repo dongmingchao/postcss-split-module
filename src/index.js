@@ -1,6 +1,6 @@
-import postcss from 'postcss';
-import path from 'path';
-import fs from 'fs';
+const postcss = require('postcss');
+const path = require('path');
+const fs = require('fs');
 
 const PLUGIN_NAME = 'postcss-split-module';
 

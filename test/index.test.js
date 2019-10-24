@@ -11,7 +11,7 @@ async function run (input, output, opts) {
   expect(result.warnings()).toHaveLength(0)
 }
 
-it('does something', async () => {
+it('change nothing', async () => {
   const sourceFile = path.resolve(__dirname, 'Task', `Task.css`);
   const source = fs.readFileSync(sourceFile).toString();
   await run(source, source, { })

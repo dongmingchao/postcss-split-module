@@ -31,6 +31,7 @@ rollup_postcss({
 }),
 ```
 Assume you have src/Task/Task.css
+
 This will generate .css.d.ts to build/components/Task/Task.css and build/components/Task/Task.css.d.ts
 
 ## Options
@@ -38,11 +39,13 @@ This will generate .css.d.ts to build/components/Task/Task.css and build/compone
 ### outputType
 
 export file type, `ts` or `json`, default is `ts`
+
 `ts` will generate .d.ts
 
 ### outputDir
 
 export path, default is `./build/components/`
+
 `Task/Task.styl` -> `./build/components/Task/Task.css.d.ts`
 
 If you do not use PostCSS, add it according to [official docs]
